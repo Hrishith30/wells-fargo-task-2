@@ -24,7 +24,7 @@ public class Security {
     private double purchasePrice;
 
     @Column(nullable = false)
-    private double purchaseDate;
+    private String purchaseDate;
 
     @Column(nullable = false)
     private int quantity;
@@ -37,7 +37,7 @@ public class Security {
 
     }
 
-    public Security(String name, String category, double purchasePrice, double purchaseDate, int quantity, Portfolio portfolio) {
+    public Security(String name, String category, double purchasePrice, String purchaseDate, int quantity, Portfolio portfolio) {
         this.name = name;
         this.category = category;
         this.purchasePrice = purchasePrice;
@@ -74,11 +74,11 @@ public class Security {
         this.purchasePrice = purchasePrice;
     }
 
-    public double getPurchaseDate() {
+    public String getPurchaseDate() {
         return purchaseDate;
     }
 
-    public void setPurchaseDate(double purchaseDate) {
+    public void setPurchaseDate(String purchaseDate) {
         this.purchaseDate = purchaseDate;
     }
 
